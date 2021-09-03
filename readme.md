@@ -7,23 +7,29 @@ En mi version se hicieron correcciones de un par de errores de rutas dinamicas y
 ## Instalación 
 
 ```
-npm i @alexotano/cfdi33
+npm i @jmdelgadoh/cfdi33
 ```
+
+### Cambios en esta versión
+Se presenta la opción de presentar el certificado y el key como strings directamente y no como url de archivo pem. 
+
+Para usar .pem usar `cerPem` y `keyPem`
+Para usar los certificados como strings utf-8 (el contenido del PEM si lo abres en texto) usar `cerString` y `keyString`
 
 ## Ejemplo de uso Factura
 
 ```javascript
 'use strict'
 
-const CFDI = require('@alexotano/cfdi33').CFDI
-const Emisor = require('@alexotano/cfdi33').Emisor
-const Receptor = require('@alexotano/cfdi33').Receptor
-const Concepto = require('@alexotano/cfdi33').Concepto
-const CuentaPredial = require('@alexotano/cfdi33').CuentaPredial
-const InformacionAduanera = require('@alexotano/cfdi33').InformacionAduanera
-const CfdiRelacionado = require('@alexotano/cfdi33').CfdiRelacionado
-const Traslado = require('@alexotano/cfdi33').Traslado
-const Retencion = require('@alexotano/cfdi33').Retencion
+const CFDI = require('@jmdelgadoh/cfdi33').CFDI
+const Emisor = require('@jmdelgadoh/cfdi33').Emisor
+const Receptor = require('@jmdelgadoh/cfdi33').Receptor
+const Concepto = require('@jmdelgadoh/cfdi33').Concepto
+const CuentaPredial = require('@jmdelgadoh/cfdi33').CuentaPredial
+const InformacionAduanera = require('@jmdelgadoh/cfdi33').InformacionAduanera
+const CfdiRelacionado = require('@jmdelgadoh/cfdi33').CfdiRelacionado
+const Traslado = require('@jmdelgadoh/cfdi33').Traslado
+const Retencion = require('@jmdelgadoh/cfdi33').Retencion
 
 const cfdi = new CFDI({
   //'Serie': 'A',
